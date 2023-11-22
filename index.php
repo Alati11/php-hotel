@@ -45,12 +45,51 @@
 <?php   
     foreach($hotels as $hotel) {
         foreach($hotel as $infohotel)
-            var_dump($infohotel);
-                        
+            // var_dump($infohotel);
+            echo $infohotel;                  
     };
 ?>
-<!-- <ul>
-    <li>
-        <?php echo ($infohotel); ?>
-    </li>
-</ul> -->
+
+<?php
+   
+   // for($i = 1; $i < $hotel; $i++) {
+     
+    //}
+     
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Descrizione</th>
+      <th scope="col">Parcheggio</th>
+      <th scope="col">Voto</th>
+      <th scope="col">Distanza</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td><?php  echo($hotel['description']) ?></td>
+      <td><?php  echo($hotel['parking']) ?></td>
+      <td><?php  echo($hotel['vote']) ?></td>
+      <td><?php  echo($hotel['distance_to_center']) ?> KM</td>
+    </tr>
+  </tbody>
+</table>
+
+    
+</body>
+</html>
+
