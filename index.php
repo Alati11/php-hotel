@@ -39,6 +39,18 @@
         ],
 
     ];
-
-var_dump($hotels);   
 ?>
+
+
+<?php   
+    foreach($hotels as $hotel) {
+        foreach($hotel as $infohotel)
+            var_dump($infohotel);
+                        
+    };
+?>
+<!-- <ul>
+    <li>
+        <?php echo ($infohotel); ?>
+    </li>
+</ul> -->
