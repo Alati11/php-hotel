@@ -44,20 +44,17 @@
 
 <?php   
     foreach($hotels as $hotel) {
-        foreach($hotel as $infohotel)
-            // var_dump($infohotel);
-            echo $infohotel;                  
+        
+            echo ($hotel['description']);
+            echo ($hotel['vote']);
+            echo ($hotel['distance_to_center']); 
+                             
     };
 ?>
 
-<?php
-   
-   // for($i = 1; $i < $hotel; $i++) {
-     
-    //}
-     
-?>
 
+
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,12 +76,20 @@
     </tr>
   </thead>
   <tbody>
+    <?php   
+        foreach($hotels as $hotel) {
+        
+            // echo ($hotel['description']);
+            // echo ($hotel['vote']);
+            // echo ($hotel['distance_to_center']); 
+        };
+    ?>
     <tr>
-      <th scope="row"></th>
-      <td><?php  echo($hotel['description']) ?></td>
-      <td><?php  echo($hotel['parking']) ?></td>
-      <td><?php  echo($hotel['vote']) ?></td>
-      <td><?php  echo($hotel['distance_to_center']) ?> KM</td>
+      <td><?php echo $hotel['name']; ?></td>
+      <td><?php echo $hotel['description']; ?></td>
+      <td><?php echo $hotel['parking'] ? 'si' : 'no'; ?></td>
+      <td><?php echo $hotel['vote'] ?></td>
+      <td><?php echo $hotel['distance_to_center'] ?> KM</td>
     </tr>
   </tbody>
 </table>
