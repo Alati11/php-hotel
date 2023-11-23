@@ -64,7 +64,6 @@
     </tr>
   </thead>
   <tbody>
-
         <h1>Hotel</h1>
         <?php 
         foreach ($hotels as $hotel) {    
@@ -77,12 +76,10 @@
                 <td><?php echo $hotel['distance_to_center'] ?> Km dal centro</td>
             </tr>
         <?php 
-    }
-    ?>
+        }
+        ?>
     </tbody>  
 </table>  
-
-
 </body>
 </html>
 
