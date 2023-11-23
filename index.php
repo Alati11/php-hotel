@@ -40,35 +40,23 @@
 
     ];
 ?>
-
-
-<?php   
-    foreach($hotels as $hotel) {
-        
-            echo ($hotel['description']);
-            echo ($hotel['vote']);
-            echo ($hotel['distance_to_center']); 
-                             
-    };
-?>
-
-
-
     
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hotel</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
+
 <table class="table">
-  <thead>
+    <tbody>
+    <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">Nome</th>
       <th scope="col">Descrizione</th>
       <th scope="col">Parcheggio</th>
       <th scope="col">Voto</th>
@@ -76,25 +64,25 @@
     </tr>
   </thead>
   <tbody>
-    <?php   
-        foreach($hotels as $hotel) {
-        
-            // echo ($hotel['description']);
-            // echo ($hotel['vote']);
-            // echo ($hotel['distance_to_center']); 
-        };
-    ?>
-    <tr>
-      <td><?php echo $hotel['name']; ?></td>
-      <td><?php echo $hotel['description']; ?></td>
-      <td><?php echo $hotel['parking'] ? 'si' : 'no'; ?></td>
-      <td><?php echo $hotel['vote'] ?></td>
-      <td><?php echo $hotel['distance_to_center'] ?> KM</td>
-    </tr>
-  </tbody>
-</table>
 
-    
+        <h1>Hotel</h1>
+        <?php 
+        foreach ($hotels as $hotel) {    
+        ?>
+            <tr>
+                <td><?php echo $hotel['name']; ?></td>
+                <td><?php echo $hotel['description']; ?></td>
+                <td><?php echo $hotel['parking'] ? 'si' : 'no'; ?></td> 
+                <td><?php echo $hotel['vote'] ?></td>
+                <td><?php echo $hotel['distance_to_center'] ?> Km dal centro</td>
+            </tr>
+        <?php 
+    }
+    ?>
+    </tbody>  
+</table>  
+
+
 </body>
 </html>
 
